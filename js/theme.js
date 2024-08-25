@@ -20,20 +20,6 @@
     }
     navbarFixed();
 
-    function slide() {
-        var images = document.getElementsByClassName('carousel-item');
-        var i;
-        var done = false;
-        for (i = 0; i < images.length; i++) {
-            if (!done && !images[i].classList[1]) {
-                images[i].classList.add('active');
-                done = true;
-            } else if (images[i].classList && images[i].classList[1] == 'active') images[i].classList.remove('active');
-        }
-    }
-    setInterval(() => {
-        slide();
-    }, 5000);
 
     function noSavingAllowed(params) {
         $(document).bind('keydown', function(e) {
